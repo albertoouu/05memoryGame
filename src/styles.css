@@ -1,20 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "jugador1        jugador1        titulo        titulo            jugador2        jugador2"
+    "card-container  card-container  card-container  card-container  card-container  card-container"
+    "card-container  card-container  card-container  card-container  card-container  card-container"
+    "card-container  card-container  card-container  card-container  card-container  card-container"
+    "card-container  card-container  card-container  card-container  card-container  card-container"
+    "footer          footer          footer          footer          footer          footer";
 }
 #titulo {
   grid-area: titulo;
+  border: solid black 1px;
 }
 #jugador1 {
   grid-area: jugador1;
+  border: solid black 1px;
 }
 #jugador2 {
   grid-area: jugador2;
+  border: solid black 1px;
 }
 #footer {
   grid-area: footer;
+  border: solid black 1px;
 }
-#grid-container {
+#card-container {
   grid-area: card-container;
+  border: solid black 1px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border: solid black 1px;
+  height: 200px;
+  width: 200px;
 }
