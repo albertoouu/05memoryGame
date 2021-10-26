@@ -1,0 +1,20 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+#titulo {
+  grid-area: titulo;
+}
+#jugador1 {
+  grid-area: jugador1;
+}
+#jugador2 {
+  grid-area: jugador2;
+}
+#footer {
+  grid-area: footer;
+}
+#grid-container {
+  grid-area: card-container;
+}
