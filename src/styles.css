@@ -1,11 +1,11 @@
-* {
+body {
   padding: 0;
   margin: 0;
 }
 main {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
   grid-template-areas:
     "jugador1        jugador1        titulo        titulo            jugador2        jugador2"
     "card-container  card-container  card-container  card-container  card-container  card-container"
@@ -13,6 +13,8 @@ main {
     "card-container  card-container  card-container  card-container  card-container  card-container"
     "card-container  card-container  card-container  card-container  card-container  card-container"
     "footer          footer          footer          footer          footer          footer";
+  height: 100vh;
+  width: auto;
 }
 #titulo {
   grid-area: titulo;
@@ -40,6 +42,18 @@ main {
 }
 .card {
   border: solid black 1px;
-  height: 200px;
-  width: 200px;
+  height: 8em;
+  width: 8em;
+  margin: 1em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    max-height: 100px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    max-height: 50px;
+  }
 }
