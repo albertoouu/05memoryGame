@@ -44,9 +44,8 @@ Posteriormente en una segunda pantalla se mostrara las cartas boca abajo que el 
 
 Finalmente se mostrara la punuacion final de cada jugador y un boton de regresar por si se quiere volver a jugar.
 
-![Diagrama de flujo](./assets/diagramaFlujo04.jpg)
-![Diagrama de flujo2](./assets/DiagramaDeFlujo.png)
-![userInterface](./assets/UI04.jpg)
+![Diagrama de flujo](./assets/diagramaFlujo05.jpg)
+![userInterface](./assets/UI05.jpg)
 
 ### Pseudocodigo general
 
