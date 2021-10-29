@@ -1,0 +1,22 @@
+{
+  "name": "05memorygame",
+  "version": "1.0.0",
+  "description": "MemoryGame",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertoouu/05memoryGame.git"
+  },
+  "keywords": [
+    "memoryCard"
+  ],
+  "author": "alberto gtz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/albertoouu/05memoryGame/issues"
+  },
+  "homepage": "https://github.com/albertoouu/05memoryGame#readme"
+}
