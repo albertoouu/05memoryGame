@@ -6,31 +6,43 @@ Aplicación para jugar memorama en pareja
 
 ## 1.Definition
 
-El usuario quiere consultar una selección apropiada de recomendaciones de su interes
+El usuario objetivo es aquel que quiere extender su vocabulario del idioma ingles jugando al mismo tiempo, este sitio esta diseñado para jugar por parejas para aprender, divertirte y competir al mismo tiempo.
 
-El usuario quiere ver un catalogo de peliculas pre-seleccionadas
+Para ello se utilizaran 10 english idioms, que los usuarios tendran que relacionar, por ejemplo:
 
-El usuario quiere ser capaz de buscar perliculas por titulo, genero y actores invilucrados.
+"Once in a blue moon" con "Meaning: very rarely"
+
+Estos "english idioms" estaran acomodados en tarjetas. En una tarjeta estara el english idiom y en otra su significado, cuando algún usuario relacione de manera correcta las tarjetas se le sumara un punto a su puntuación.
+
+Ganara el usuario que tenga mas puntos.
+
+## User Stories
+
+El usuario quiere poder jugar en parejas para pasar el tiempo
+
+El usuario quiere poder jugar un juego de memoria (memorama) relacionado a sus intereses
+
+El usuario quiere ver la puntuación del jugador perdedor y la del ganador con sus respectivos nombres
 
 ### Propuestas
 
-Para cumplir los requerimientos del usuario se desarrollara una aplicación pensada para dispositivos mobiles y para dispositivos de formato "grande". Donde el usuario podra consultar informacion de peliculas de Sci-Fi, se mostrara en pantalla recomendaciones de peliculas bien calificadas por la critica, tendencias, populares, aliens, etc.
+Para cumplir los requerimientos del usuario se desarrollara una aplicación pensada para dispositivos mobiles ,ipad y de escritorio. Donde el usuario podra jugar en pareja para competir y determinar las parejas de los english idioms con sus significados, se mostrara en una primera pantalla recuadros de entrada de datos (inputs) para que los usuarios ingresen su nombre, posteriormente se mostrara el juego tipo memorama y los usuarios se turnaran para voltear las tarjetas.
 
-Se planea integrar autentificación en el proyecto para personalizar la busqueda, posiblemente la aplicacion contara con una pantalla de bienvenida y/o autentificacion.
+Finalmente se mostrarara la puntuación final de cada jugador.
 
 ### Viabilidad
 
-Si el tiempo de desarollo lo permite se implementara la caracteristica de autentificación, en caso de no contar con el tiempo suficiente el proyecto se centrara en el objetivo principal, que es mostrar un catalogo personalizado.
+Si el tiempo de desarollo lo permite se implementara la caracteristica de musica de fondo, asi como efectos de sonido al relacionar una tarjeta de forma correcta e incorrecta.
 
 ---
 
 ## 2.Diseño
 
-El proyecto, tentativamente, contara con una pantalla de bienvenida, donde se mostrara el nombre del proyecto.
+El proyecto contara con una pantalla de bienvenida, donde se mostrara el nombre del proyecto con recuadros de entrada de datos (inputs) para ingresar el nombre de los usuarios que jugaran.
 
-Seguido de la pantalla de bienvenida se mostrara la pantalla del usuario y posiblemente pedira la auntentificación.
+Posteriormente en una segunda pantalla se mostrara las cartas boca abajo que el usuario tendra que 'clickear' para voltear y determinar si es pareja con una segunda carta.
 
-Finalmente se mostrara el catalogo personalalizado dirigido a los usuarios con predileccion a la ciencia ficción.
+Finalmente se mostrara la punuacion final de cada jugador y un boton de regresar por si se quiere volver a jugar.
 
 ![Diagrama de flujo](./assets/diagramaFlujo04.jpg)
 ![Diagrama de flujo2](./assets/DiagramaDeFlujo.png)
@@ -41,18 +53,11 @@ Finalmente se mostrara el catalogo personalalizado dirigido a los usuarios con p
 ```
 
 Mostrar pantalla de bienvenida
-Mostrar pantalla de usuario y/o contraseña despes de 2 segundos
-pedir contraseña
-si es incorrecta no hacer nada
-si es correcta mostrar pantalla donde se ubican las peliculas pre-establecidas(pantalla "home")
-si se hace 'click' en alguna pelicula muestra un alert con la información de la pelicula
-si se da 'click' en un boton **buscar**, imprime en pantalla peliculas que coincidan con un **input** que el usuario ingrese
-en todo el flujo, se mostrara un boton con la funcionalidad de regresar a la pantalla "home"
+Ingresar los usuarios en un input
+Si el usuario le da clik a un boton de continuar, se mostrara la segunda pantalla con los nombres de los jugadores
+Sera el turno del jugador numero1
+Si el jugador1 relaciona de manera correcta las cartas se sumara uno a su puntuacion y sera el turno del otro jugador(jugador2)
+De la misma manera en el turno del otro jugador, si el jugador2 relaciona de manera correcta las cartas se sumara uno a su puntuación y sera el turno del otro jugador(jugador1)
+Al finalizar las cartas se mostrara la puntuación final de cada jugador y un boton de regresar si se quiere volver a jugar.
 
 ```
-
-### Deployment
-
-![captura de pantalla 1](./assets/SS1.png)
-![captura de pantalla 2](./assets/SS2.png)
-![captura de pantalla 3](./assets/SS3.png)
