@@ -1,50 +1,101 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
-  background-color: rgb(180, 101, 101);
+  background-color: rgb(29, 37, 143);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.1fr 0.2fr;
   grid-template-areas:
     "jugador1        jugador1        titulo          titulo          jugador2        jugador2"
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
+    "btn             btn             btn             btn             btn             btn"
     "footer          footer          footer          footer          footer          footer";
   height: 100vh;
-  width: auto;
+  width: 100%;
 }
 #titulo {
   grid-area: titulo;
-  border: solid black 1px;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #jugador1 {
   grid-area: jugador1;
-  border: solid black 1px;
+  margin: 5px;
+  border: solid 2px white;
+  padding: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #jugador2 {
   grid-area: jugador2;
-  border: solid black 1px;
+  margin: 5px;
+  border: solid 2px white;
+  padding: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#footer {
+#regresar {
+  grid-area: btn;
+}
+footer {
   grid-area: footer;
   border: solid black 1px;
 }
-#memory-game {
+
+.memory-game {
   grid-area: memory-game;
-  border: solid black 5px;
+  margin: auto;
+  border: 2px solid lime;
   display: flex;
-  gap: 5px;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
 }
-img {
+
+.memory-card {
+  border: 2px solid aqua;
+  margin: 5px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: scale(1);
 }
+img {
+  width: 150px;
+}
+
+.front-face,
+.back-face {
+  border: 2px solid deeppink;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
 /*
 @media only screen and (max-width: 1000px) {
   .card {
