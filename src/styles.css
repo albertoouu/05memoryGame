@@ -60,6 +60,10 @@ footer {
   border: solid black 1px;
   color: white;
 }
+#scoreP1,
+#scoreP2 {
+  margin-left: 10px;
+}
 
 .memory-game {
   grid-area: memory-game;

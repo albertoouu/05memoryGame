@@ -16,11 +16,21 @@ let renderCards = (data) => {
         </div>`
   }
   const cards = document.querySelectorAll('.memory-card');
+  let nameP1 = document.getElementById('nameP1')
+  let nameP2 = document.getElementById('nameP2')
+  let scoreP1 = document.getElementById('scoreP1')
+  let scoreP2 = document.getElementById('scoreP2')
+  nameP1.style.color = '#e36477'
+  scoreP1.innerHTML="0"
+  scoreP2.innerHTML="0"
   console.log(cards)
 
   let hasFlippedCard = false;
   let lockBoard = false;
   let firstCard, secondCard;
+  let turno = 0;
+  let score1 =0;
+  let score2= 0;
 
   function flipCard() {
     if (lockBoard) return;
@@ -31,7 +41,6 @@ let renderCards = (data) => {
       // first click
       hasFlippedCard = true;
       firstCard = this;
-
       return;
     }
 
@@ -44,11 +53,34 @@ let renderCards = (data) => {
 
   function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
-    isMatch ? disableCards() : unflipCards();
+    turno++;
+    if((turno%2)==1){
+     nameP1.style.color = '#fff'
+     nameP2.style.color = '#e36477'
+    }else{
+      nameP2.style.color = '#fff'
+      nameP1.style.color = '#e36477'
+    }
+    console.log(turno)
+    if(isMatch){
+      disableCards()
+      if((turno%2)==1){
+        score1++;
+        console.log("El score de p1 es: "+score1)
+        scoreP1.innerHTML=score1
+      }else{
+        score2++;
+        console.log("El score de p2 es: "+score2)
+        scoreP2.innerHTML=score2
+      }
+    }else{
+      unflipCards()
+    }
+    //isMatch ? disableCards() : unflipCards();
   }
 
   function disableCards() {
+
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
   }
@@ -65,6 +97,7 @@ let renderCards = (data) => {
   }
 
   cards.forEach(card => card.addEventListener('click', flipCard));
+
 }
 
 
