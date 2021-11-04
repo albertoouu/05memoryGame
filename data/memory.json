@@ -1,0 +1,125 @@
+{
+  "cards": [
+    {
+      "titulo": "1.1",
+      "src": "../data/assets/1.1.png",
+      "dataframework": "pair-1",
+      "class": "front-face"
+    },
+    {
+      "titulo": "1.2",
+      "src": "../data/assets/1.2.png",
+      "dataframework": "pair-1",
+      "class": "front-face"
+    },
+    {
+      "titulo": "2.1",
+      "src": "../data/assets/2.1.png",
+      "dataframework": "pair-2",
+      "class": "front-face"
+    },
+    {
+      "titulo": "2.2",
+      "src": "../data/assets/2.2.png",
+      "dataframework": "pair-2",
+      "class": "front-face"
+    }
+    ,
+    {
+      "titulo": "3.1",
+      "src": "../data/assets/3.1.png",
+      "dataframework": "pair-3",
+      "class": "front-face"
+    },
+    {
+      "titulo": "3.2",
+      "src": "../data/assets/3.2.png",
+      "dataframework": "pair-3",
+      "class": "front-face"
+    },
+    {
+      "titulo": "4.1",
+      "src": "../data/assets/4.1.png",
+      "dataframework": "pair-4",
+      "class": "front-face"
+    },
+    {
+      "titulo": "4.2",
+      "src": "../data/assets/4.2.png",
+      "dataframework": "pair-4",
+      "class": "front-face"
+    },
+    {
+      "titulo": "5.1",
+      "src": "../data/assets/5.1.png",
+      "dataframework": "pair-5",
+      "class": "front-face"
+    },
+    {
+      "titulo": "5.2",
+      "src": "../data/assets/5.2.png",
+      "dataframework": "pair-5",
+      "class": "front-face"
+    },
+    {
+      "titulo": "6.1",
+      "src": "../data/assets/6.1.png",
+      "dataframework": "pair-6",
+      "class": "front-face"
+    },
+    {
+      "titulo": "6.2",
+      "src": "../data/assets/6.2.png",
+      "dataframework": "pair-6",
+      "class": "front-face"
+    },
+    {
+      "titulo": "7.1",
+      "src": "../data/assets/7.1.png",
+      "dataframework": "pair-7",
+      "class": "front-face"
+    },
+    {
+      "titulo": "7.2",
+      "src": "../data/assets/7.2.png",
+      "dataframework": "pair-7",
+      "class": "front-face"
+    },
+    {
+      "titulo": "8.1",
+      "src": "../data/assets/8.1.png",
+      "dataframework": "pair-8",
+      "class": "front-face"
+    },
+    {
+      "titulo": "8.2",
+      "src": "../data/assets/8.2.png",
+      "dataframework": "pair-8",
+      "class": "front-face"
+    },
+    {
+      "titulo": "9.1",
+      "src": "../data/assets/9.1.png",
+      "dataframework": "pair-9",
+      "class": "front-face"
+    },
+    {
+      "titulo": "9.2",
+      "src": "../data/assets/9.2.png",
+      "dataframework": "pair-9",
+      "class": "front-face"
+    },
+    {
+      "titulo": "10.1",
+      "src": "../data/assets/10.1.png",
+      "dataframework": "pair-10",
+      "class": "front-face"
+    },
+    {
+      "titulo": "10.2",
+      "src": "../data/assets/10.2.png",
+      "dataframework": "pair-10",
+      "class": "front-face"
+    }
+  ]
+}

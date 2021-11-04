@@ -20,8 +20,9 @@ main {
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
     "btn             btn             btn             btn             btn             btn"
     "footer          footer          footer          footer          footer          footer";
-  height: 100vh;
+
   width: 100%;
+  height: 100vh;
 }
 #titulo {
   grid-area: titulo;
@@ -60,11 +61,22 @@ footer {
   border: solid black 1px;
   color: white;
 }
-
+#scoreP1,
+#scoreP2 {
+  margin-left: 10px;
+}
+#welcome {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid 1px white;
+  height: 100vh;
+}
 .memory-game {
   grid-area: memory-game;
   margin: auto;
-  /* border: 2px solid lime;*/
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -73,7 +85,6 @@ footer {
 }
 
 .memory-card {
-  /* border: 2px solid aqua;*/
   margin: 5px;
   position: relative;
   width: 160px;
@@ -93,7 +104,6 @@ img {
 
 .front-face,
 .back-face {
-  /*border: 2px solid deeppink;*/
   position: absolute;
   width: 100%;
   height: 100%;
@@ -108,15 +118,25 @@ img {
 .front-face {
   transform: rotateY(180deg);
 }
-/*
-@media only screen and (max-width: 1000px) {
-  .card {
-    max-height: 100px;
+[hidden] {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  img {
+    width: 100px;
+  }
+  .memory-card {
+    width: 100px;
+    height: 100px;
   }
 }
-@media only screen and (max-width: 600px) {
-  .card {
-    max-height: 50px;
+@media only screen and (max-width: 500px) {
+  img {
+    width: 80px;
+  }
+  .memory-card {
+    width: 80px;
+    height: 80px;
   }
 }
-*/
