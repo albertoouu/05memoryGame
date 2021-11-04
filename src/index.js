@@ -16,6 +16,7 @@ let renderCards = (data) => {
         </div>`
   };
   const cards = document.querySelectorAll('.memory-card');
+  console.log(cards)
   let nameP1 = document.getElementById('nameP1');
   let nameP2 = document.getElementById('nameP2');
   let scoreP1 = document.getElementById('scoreP1');
@@ -42,6 +43,7 @@ let renderCards = (data) => {
 
   function flipCard() {
     if (lockBoard) return;
+    if (this == firstCard) return;
 
     this.classList.add('flip');
 
@@ -69,7 +71,6 @@ let renderCards = (data) => {
       nameP2.style.color = '#fff'
       nameP1.style.color = '#e36477'
     }
-    console.log(turno)
     if(isMatch){
       disableCards()
       if((turno%2)==1){
@@ -91,6 +92,7 @@ let renderCards = (data) => {
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    resetBoard()
   }
 
   function unflipCards() {
@@ -99,13 +101,20 @@ let renderCards = (data) => {
     setTimeout(() => {
       firstCard.classList.remove('flip');
       secondCard.classList.remove('flip');
+      resetBoard()
 
-      lockBoard = false;
     }, 1000);
+  }
+  
+  function resetBoard(){
+    hasFlippedCard = false 
+    lockBoard = false
+    firstCard = null
+    secondCard = null
   }
 
   cards.forEach(card => card.addEventListener('click', flipCard));
 
 }
-document.getElementById('welcome').hidden = false
-document.getElementById('mainSection').hidden = true
+document.getElementById('welcome').hidden = true
+document.getElementById('mainSection').hidden = false
