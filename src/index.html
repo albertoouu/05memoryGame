@@ -17,20 +17,20 @@
   <body>
     <section id="welcome">
       <h1>Memory Game</h1>
-      <input type="text" name="" id="" />
-      <input type="text" name="" id="" />
-      <button>Adelante</button>
+      <input class="inputs" type="text" name="" id="" placeholder="Jugador 1"/>
+      <input class="inputs" type="text" name="" id="" placeholder="Jugador 2"/>
+      <button id="botonPlay">Play</button>
     </section>
-    <main class="container" id="main">
+    <main class="container" id="mainSection">
       <div id="titulo" class="grid-item">
         <h1>Memory Game</h1>
       </div>
       <div id="jugador1" class="grid-item">
-        <h2 id="nameP1">Jugador1:</h2>
+        <h2 id="nameP1">Jugador 1:</h2>
         <p id="scoreP1">Score:</p>
       </div>
       <div id="jugador2" class="grid-item">
-        <h2 id="nameP2">Jugador2:</h2>
+        <h2 id="nameP2">Jugador 2:</h2>
         <p id="scoreP2">Score:</p>
       </div>
       <section class="memory-game" id="cardsSection"></section>

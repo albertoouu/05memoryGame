@@ -5,7 +5,7 @@ fetch("../data/memory.json")
 
 let renderCards = (data) => {
 
-  let cardsSection = document.getElementById('cardsSection')
+  let cardsSection = document.getElementById('cardsSection');
 
   for (const carta of data.cards) {
 
@@ -14,16 +14,24 @@ let renderCards = (data) => {
           <img src="${carta.src}" alt="${carta.dataframework}" class="front-face" />
           <img src="../data/assets/cover2.png" alt="cover" class="back-face" />
         </div>`
-  }
+  };
   const cards = document.querySelectorAll('.memory-card');
-  let nameP1 = document.getElementById('nameP1')
-  let nameP2 = document.getElementById('nameP2')
-  let scoreP1 = document.getElementById('scoreP1')
-  let scoreP2 = document.getElementById('scoreP2')
+  let nameP1 = document.getElementById('nameP1');
+  let nameP2 = document.getElementById('nameP2');
+  let scoreP1 = document.getElementById('scoreP1');
+  let scoreP2 = document.getElementById('scoreP2');
+
+
+  let botonPlay = document.getElementById('botonPlay')
+  botonPlay.addEventListener('click', () => {
+  document.getElementById('welcome').hidden = true
+  document.getElementById('mainSection').hidden = false
+  })
+ 
   nameP1.style.color = '#e36477'
   scoreP1.innerHTML="0"
   scoreP2.innerHTML="0"
-  console.log(cards)
+  //console.log(cards)
 
   let hasFlippedCard = false;
   let lockBoard = false;
@@ -99,5 +107,5 @@ let renderCards = (data) => {
   cards.forEach(card => card.addEventListener('click', flipCard));
 
 }
-
-
+document.getElementById('welcome').hidden = false
+document.getElementById('mainSection').hidden = true
