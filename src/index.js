@@ -16,7 +16,7 @@ let renderCards = (data) => {
         </div>`
   };
   const cards = document.querySelectorAll('.memory-card');
-  console.log(cards)
+  //console.log(cards)
   let nameP1 = document.getElementById('nameP1');
   let nameP2 = document.getElementById('nameP2');
   let scoreP1 = document.getElementById('scoreP1');
@@ -27,8 +27,17 @@ let renderCards = (data) => {
   botonPlay.addEventListener('click', () => {
   document.getElementById('welcome').hidden = true
   document.getElementById('mainSection').hidden = false
+  nameP1.innerHTML = "P1 "+document.getElementById('inputP1').value + ":"
+  nameP2.innerHTML = "P2 "+document.getElementById('inputP2').value + ":"
   })
- 
+
+  let botonRegresar = document.getElementById('regresar')
+  botonRegresar.addEventListener('click', () => {
+    console.log("click regresar")
+    location.reload();
+    document.getElementById('welcome').hidden = false
+    document.getElementById('mainSection').hidden = true
+  })
   nameP1.style.color = '#e36477'
   scoreP1.innerHTML="0"
   scoreP2.innerHTML="0"
@@ -116,5 +125,5 @@ let renderCards = (data) => {
   cards.forEach(card => card.addEventListener('click', flipCard));
 
 }
-document.getElementById('welcome').hidden = true
-document.getElementById('mainSection').hidden = false
+document.getElementById('welcome').hidden = false
+document.getElementById('mainSection').hidden = true
