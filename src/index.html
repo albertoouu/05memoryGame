@@ -12,14 +12,22 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/b5764fffd2.js" crossorigin="anonymous"></script>
     <title>Memory Game</title>
   </head>
   <body>
     <section id="welcome">
-      <h1>Memory Game</h1>
-      <input class="inputs" type="text" name="" id="" placeholder="Jugador 1" />
-      <input class="inputs" type="text" name="" id="" placeholder="Jugador 2" />
+      <img src="../data/assets/title.png" alt="" id="mainTitle"> 
+      <p>Ingrese los nombres de los jugadores</p>
+      <input class="inputs" type="text" name="" id="inputP1" placeholder="Jugador 1"/>
+      <input class="inputs" type="text" name="" id="inputP2" placeholder="Jugador 2"/>
       <button id="botonPlay">Play</button>
+      <section id="footerMain">
+        <p>
+          &copy; Created by:
+          <a href="https://www.linkedin.com/in/albertooouu/" target="_blank">Albertoouu <i class="fas fa-robot"></i></a>
+        </p>
+      </section>
     </section>
     <main class="container" id="mainSection">
       <div id="titulo" class="grid-item">
@@ -35,7 +43,12 @@
       </div>
       <section class="memory-game" id="cardsSection"></section>
       <button id="regresar">Regresar</button>
-      <footer>Footer</footer>
+      <footer>
+        <p>
+          &copy; Created by:
+          <a href="https://www.linkedin.com/in/albertooouu/" target="_blank">Albertoouu <i class="fas fa-robot"></i></a>
+        </p>
+      </footer>
     </main>
   </body>
 </html>
