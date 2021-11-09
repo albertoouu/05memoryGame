@@ -8,7 +8,7 @@ Aplicación para jugar memorama en pareja
 
 El usuario objetivo es aquel que quiere extender su vocabulario del idioma ingles jugando al mismo tiempo, este sitio esta diseñado para jugar por parejas para aprender, divertirte y competir al mismo tiempo.
 
-Para ello se utilizaran 10 english idioms, que los usuarios tendran que relacionar, por ejemplo:
+Para ello se utilizaran 10 english idioms, "An idiom is a phrase, saying, or a group of words with a metaphorical (not literal) meaning, which has become accepted in common usage", que los usuarios tendran que relacionar, por ejemplo:
 
 "Once in a blue moon" con "Meaning: very rarely"
 

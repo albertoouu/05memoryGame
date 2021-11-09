@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(13, 15, 44);
+  background-color: #005f73;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #e9d8a6;
 }
 main {
   display: grid;
@@ -58,7 +60,7 @@ main {
   width: 20%;
   padding: 0.1rem;
   margin: 0.1rem;
-  background: rgba(121, 168, 238, 0.836);
+  background: #ee9b00;
   color: white;
   border-radius: 2px;
   cursor: pointer;
@@ -68,7 +70,11 @@ main {
 footer {
   grid-area: footer;
   border: solid black 1px;
-  color: white;
+  color: #e9d8a6;
+  display: flex;
+  justify-content: flex-start;
+  border-top: 5px solid #ca6702;
+  background-image: linear-gradient(90deg, #9b2226, #9b2226);
 }
 #scoreP1,
 #scoreP2 {
@@ -105,6 +111,7 @@ footer {
   transform-style: preserve-3d;
   transition: transform 0.5s;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 img {
   width: 160px;
@@ -144,7 +151,7 @@ img {
 #botonPlay {
   width: 20%;
   padding: 0.75rem;
-  background: rgba(121, 168, 238, 0.836);
+  background: #ee9b00;
   color: inherit;
   border-radius: 2px;
   cursor: pointer;
@@ -153,16 +160,17 @@ img {
 #footerMain {
   position: absolute;
   bottom: 0;
-
+  color: #e9d8a6;
   width: 100%;
-  border-top: 5px solid rgb(255, 255, 255);
-  background-image: linear-gradient(90deg, rgb(13, 14, 44), rgb(13, 14, 44));
+  border-top: 5px solid #ca6702;
+  background-image: linear-gradient(90deg, #9b2226, #9b2226);
 }
-footer {
-  background-image: linear-gradient(90deg, rgb(13, 14, 44), rgb(13, 14, 44));
-  display: flex;
-  justify-content: flex-start;
-  border-top: 5px solid rgb(255, 255, 255);
+
+a {
+  color: #e9d8a6;
+}
+a:visited {
+  color: #e9d8a6;
 }
 @media only screen and (max-width: 1200px) {
   img {
