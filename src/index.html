@@ -27,36 +27,41 @@
   <body>
     <section id="welcome">
       <img src="../data/assets/title.png" alt="" id="mainTitle" />
-      <p>Ingrese los nombres de los jugadores</p>
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputP1" class="col-form-label">P1</label>
+      <div>
+        <div id="instrucciones">
+          <p>Ingrese los nombres de los jugadores</p>
+          <p>Inicia el jugador P1</p>
         </div>
-        <div class="col-auto">
-          <input
-            type="text"
-            id="inputP1"
-            class="form-control inputs"
-            aria-describedby="passwordHelpInline"
-            maxlength="10"
-          />
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputP1" class="col-form-label">P1</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="text"
+              id="inputP1"
+              class="form-control inputs"
+              aria-describedby="passwordHelpInline"
+              maxlength="10"
+            />
+          </div>
+          <div class="col-auto"></div>
         </div>
-        <div class="col-auto"></div>
-      </div>
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputP2" class="col-form-label">P2</label>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputP2" class="col-form-label">P2</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="text"
+              id="inputP2"
+              class="form-control inputs"
+              aria-describedby="passwordHelpInline"
+              maxlength="10"
+            />
+          </div>
+          <div class="col-auto"></div>
         </div>
-        <div class="col-auto">
-          <input
-            type="text"
-            id="inputP2"
-            class="form-control inputs"
-            aria-describedby="passwordHelpInline"
-            maxlength="10"
-          />
-        </div>
-        <div class="col-auto"></div>
       </div>
       <button type="button" class="btn btn-warning" id="botonPlay">Play</button>
       <footer>
