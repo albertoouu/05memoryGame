@@ -194,8 +194,8 @@ a:visited {
     height: 80px;
   }
   #mainTitle {
-    margin: 50px;
-    width: 300px;
+    margin: 25px;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 570px) {
@@ -215,6 +215,9 @@ a:visited {
     width: 60px;
     height: 60px;
   }
+  #instrucciones > p {
+    margin: 0;
+  }
 }
 @media only screen and (max-height: 420px) {
   img {
@@ -226,6 +229,6 @@ a:visited {
   }
   #mainTitle {
     margin: 5px;
-    width: 300px;
+    width: 200px;
   }
 }
