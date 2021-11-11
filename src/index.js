@@ -6,7 +6,7 @@ fetch("../data/memory.json")
 let renderCards = (data) => {
 
   let cardsSection = document.getElementById('cardsSection');
-
+ // data.cards.sort(() => Math.random() - 0.5)
   for (const carta of data.cards) {
 
     cardsSection.innerHTML +=
@@ -86,10 +86,12 @@ let renderCards = (data) => {
         score1++;
         console.log("El score de p1 es: "+score1)
         scoreP1.innerHTML=score1
+        ganador(score1,score2)
       }else{
         score2++;
         console.log("El score de p2 es: "+score2)
         scoreP2.innerHTML=score2
+        ganador(score1,score2)
       }
     }else{
       unflipCards()
@@ -120,6 +122,21 @@ let renderCards = (data) => {
     lockBoard = false
     firstCard = null
     secondCard = null
+  }
+  function ganador(score1,score2){
+    setTimeout(() => {
+    if((score1+score2)==10){
+      if(score1>score2){
+        alert(`¡Felicidades, ganaste ${document.getElementById('inputP1').value}!`)
+      } else {
+        if(score1<score2){
+          alert(`¡Felicidades, ganaste ${document.getElementById('inputP2').value}!`)
+        } else {
+          alert("¡Es un empate!")
+        }
+      }
+    }
+  },500)
   }
 
   cards.forEach(card => card.addEventListener('click', flipCard));
