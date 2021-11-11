@@ -72,7 +72,7 @@ main {
   display: flex;
   color: white;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   height: 100vh;
 }
@@ -104,6 +104,12 @@ main {
 }
 img {
   width: 160px;
+}
+#instrucciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .memory-card.flip {
@@ -152,9 +158,6 @@ footer {
 
 
   */
-  position: absolute;
-  bottom: 0;
-  border-top: solid 5px;
   border-top: 5px solid #ca6702;
   background-image: linear-gradient(90deg, #9b2226, #9b2226);
   display: flex;
