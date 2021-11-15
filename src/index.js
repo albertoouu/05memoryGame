@@ -23,6 +23,7 @@ let renderCards = (data) => {
   botonPlay.addEventListener("click", () => {
     document.getElementById("welcome").hidden = true;
     document.getElementById("mainSection").hidden = false;
+    stopAmbiente();
     nameP1.innerHTML = "P1 " + document.getElementById("inputP1").value + ":";
     nameP2.innerHTML = "P2 " + document.getElementById("inputP2").value + ":";
   });
@@ -45,7 +46,7 @@ let renderCards = (data) => {
   let turno = 0;
   let score1 = 0;
   let score2 = 0;
-
+  playAmbiente();
   function flipCard() {
     if (lockBoard) return;
     if (this == firstCard) return;
@@ -77,6 +78,7 @@ let renderCards = (data) => {
       nameP1.style.color = "#e36477";
     }
     if (isMatch) {
+      playCheckSound();
       disableCards();
       if (turno % 2 == 1) {
         score1++;
@@ -90,25 +92,51 @@ let renderCards = (data) => {
         ganador(score1, score2);
       }
     } else {
+      playError()
       unflipCards();
     }
     //isMatch ? disableCards() : unflipCards();
   }
 
   function disableCards() {
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
-    resetBoard();
+    lockBoard = true;
+    setTimeout(() =>{
+      firstCard.removeEventListener("click", flipCard);
+      secondCard.removeEventListener("click", flipCard);
+      resetBoard();
+    }, 1100) 
   }
-
+  function playError () {
+    const errorSound = document.getElementById('errorSound')
+    errorSound.play()
+  }
+  function playGameOver () {
+    const playGameOver = document.getElementById('gameOver')
+    playGameOver.play()
+  }
+  function playCheckSound() {
+    const playCheckSound = document.getElementById('checkSound')
+    playCheckSound.volume = 0.2;
+    playCheckSound.play()
+  }
+  function playAmbiente() {
+    const playAmbiente = document.getElementById('ambiente')
+    playAmbiente.volume = 0.2;
+    playAmbiente.loop = true;
+    playAmbiente.play()
+  }
+  function stopAmbiente() {
+    const playAmbiente = document.getElementById('ambiente')
+    playAmbiente.pause()
+    playAmbiente.currentTime = 0;
+  }
   function unflipCards() {
     lockBoard = true;
-
     setTimeout(() => {
       firstCard.classList.remove("flip");
       secondCard.classList.remove("flip");
       resetBoard();
-    }, 1000);
+    }, 2000);
   }
 
   function resetBoard() {
@@ -121,22 +149,33 @@ let renderCards = (data) => {
     setTimeout(() => {
       if (score1 + score2 == 10) {
         if (score1 > score2) {
+          stopAmbiente();
+          playGameOver();
           alert(
-            `¡Felicidades, ganaste ${document.getElementById("inputP1").value}!`
+            `¡Felicidades, ganaste P1: ${document.getElementById("inputP1").value}!`
           );
+
         } else {
           if (score1 < score2) {
+            stopAmbiente();
+            playGameOver();
             alert(
-              `¡Felicidades, ganaste ${
+              `¡Felicidades, ganaste P2: ${
                 document.getElementById("inputP2").value
               }!`
             );
+
           } else {
+            stopAmbiente();
+            playGameOver();
             alert("¡Es un empate!");
           }
         }
       }
     }, 500);
+    if((score1+score2)>6){
+      playAmbiente()
+    }
   }
 
   cards.forEach((card) => card.addEventListener("click", flipCard));
