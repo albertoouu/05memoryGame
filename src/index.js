@@ -35,10 +35,36 @@ let renderCards = (data) => {
     document.getElementById("welcome").hidden = false;
     document.getElementById("mainSection").hidden = true;
   });
+
+  let botonOtraVez = document.getElementById("otraVez");
+  botonOtraVez.addEventListener("click", () => {
+  stopAmbiente();
   nameP1.style.color = "#e36477";
   scoreP1.innerHTML = "0";
   scoreP2.innerHTML = "0";
-  //console.log(cards)
+  hasFlippedCard = false;
+  lockBoard = false;
+  firstCard, secondCard;
+  turno = 0;
+  score1 = 0;
+  score2 = 0;
+  cards.forEach((card) => card.addEventListener("click", flipCard));
+  cards.forEach((card) => card.classList.remove("flip"))
+  function shuffle() {
+    cards.forEach(card =>{
+      let randomPos = Math.floor(Math.random()*20)
+      console.log(randomPos)
+      card.style.order = randomPos
+    })
+  }
+  shuffle()
+  console.log("click otra vez");
+  });
+
+
+  nameP1.style.color = "#e36477";
+  scoreP1.innerHTML = "0";
+  scoreP2.innerHTML = "0";
 
   let hasFlippedCard = false;
   let lockBoard = false;
@@ -46,7 +72,7 @@ let renderCards = (data) => {
   let turno = 0;
   let score1 = 0;
   let score2 = 0;
-  playAmbiente();
+
   function flipCard() {
     if (lockBoard) return;
     if (this == firstCard) return;
