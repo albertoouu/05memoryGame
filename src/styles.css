@@ -22,7 +22,7 @@ main {
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
     "memory-game     memory-game     memory-game     memory-game     memory-game     memory-game"
-    "boton           boton           boton           boton           boton           boton";
+    "botones         botones         botones         botones         botones         botones";
 }
 #titulo {
   grid-area: titulo;
@@ -53,8 +53,8 @@ main {
   align-items: center;
   justify-content: center;
 }
-#regresar {
-  grid-area: boton;
+#regresar,
+#otraVez {
   width: 20%;
   padding: 0.3rem;
   margin: 0.1rem;
@@ -62,6 +62,11 @@ main {
   color: white;
   margin: 10px;
   justify-self: center;
+}
+#botones {
+  grid-area: botones;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #scoreP1,
