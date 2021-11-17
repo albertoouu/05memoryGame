@@ -5,7 +5,7 @@ fetch("../data/memory.json")
 
 let renderCards = (data) => {
   let cardsSection = document.getElementById("cardsSection");
-  //data.cards.sort(() => Math.random() - 0.5);
+  data.cards.sort(() => Math.random() - 0.5);
   for (const carta of data.cards) {
     cardsSection.innerHTML += `<div class="memory-card" data-framework="${carta.dataframework}">
           <img src="${carta.src}" alt="${carta.dataframework}" class="front-face" />
