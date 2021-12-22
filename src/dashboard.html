@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Ícono-->
+    <link rel="icon" href="../assets/UI/logo.png" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="dashBoard.css" />
+  </head>
+  <body>
+    <div id="main-content">
+      <header>
+        <div class="header-title-wrapper">
+          <div class="header-title">
+            <h1>Analytics</h1>
+            <p>
+              Display visitors Analytics <span class="las la-chart-line"></span>
+            </p>
+          </div>
+        </div>
+        <div class="header-action">
+          <button class="btn btn-main">
+            <span class="las la-user-edit"></span>
+            Update
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h3 class="section-head">Overview</h3>
+          <div class="analytics">
+            <div class="analytic">
+              <div class="analytic-icon">
+                <span class="las la-id-card"></span>
+              </div>
+              <div class="analytic-info">
+                <h4>Visitantes del día</h4>
+                <h1 id="visitantesDiarios">6 V</h1>
+              </div>
+            </div>
+            <div class="analytic">
+              <div class="analytic-icon">
+                <span class="las la-user"></span>
+              </div>
+              <div class="analytic-info">
+                <h4>Visitantes semanales</h4>
+                <h1 id="visitantesSemanales">50 V</h1>
+              </div>
+            </div>
+            <div class="analytic">
+              <div class="analytic-icon">
+                <span class="las la-user-alt"></span>
+              </div>
+              <div class="analytic-info">
+                <h4>Visitantes mensuales</h4>
+                <h1 id="visitantesMensuales">204 V</h1>
+              </div>
+            </div>
+            <div class="analytic">
+              <div class="analytic-icon">
+                <span class="las la-users"></span>
+              </div>
+              <div class="analytic-info">
+                <h4>Visitantes totales</h4>
+                <h1 id="visitantesTotales">1.6K V</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="block-grid">
+            <div class="visitor-list">
+              <h3 class="section-head">Visitor list</h3>
+              <div class="list-content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Telefono</th>
+                      <th>Compañia</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>David Elias</td>
+                      <td>58492676</td>
+                      <td>Obber</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>Jose Alberto</td>
+                      <td>5526985901</td>
+                      <td>Roppi</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>David Elias</td>
+                      <td>58492672</td>
+                      <td>Obber</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>Jose Alberto</td>
+                      <td>5526985901</td>
+                      <td>Roppi</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>David Elias</td>
+                      <td>58492676</td>
+                      <td>Obber</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>Jose Alberto</td>
+                      <td>5526985901</td>
+                      <td>Roppi</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>David Elias</td>
+                      <td>58492672</td>
+                      <td>Obber</td>
+                      <td>Detalles</td>
+                    </tr>
+                    <tr>
+                      <td>Jose Alberto</td>
+                      <td>5526985901</td>
+                      <td>Roppi</td>
+                      <td>Detalles</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="graph-card">
+              <h3 class="section-head">Graph</h3>
+              <div class="graph-content">
+                <div class="graph-head">
+                  <div class="icon-wrapper">
+                    <!-- <div class="icon">
+                      <span class="las la-eye"></span>
+                    </div>
+                    <div class="icon">
+                      <span class="las la-clock"></span>
+                    </div> -->
+                  </div>
+                  <div class="graph-select">
+                    <!-- <select name="" id="">
+                      <option value="">December</option>
+                    </select> -->
+                  </div>
+                </div>
+                <div class="graph-board">
+                  <canvas id="myChart" width="100%" height="50px"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDUalN6rqWDDMQ1Y0WoGgV7QIqw5m8T-08",
+        authDomain: "visitor-reception-a8907.firebaseapp.com",
+        projectId: "visitor-reception-a8907",
+        storageBucket: "visitor-reception-a8907.appspot.com",
+        messagingSenderId: "345085369922",
+        appId: "1:345085369922:web:8e278452017f18737fd7db",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!--Script Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--dashboard.js-->
+    <script src="pruebaDataDashboard.js"></script>
+  </body>
+</html>
